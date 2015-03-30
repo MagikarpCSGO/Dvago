@@ -25,10 +25,11 @@ public class control : MonoBehaviour {
 		if(Input.GetKey(KeyCode.D)){
 			
 			GetComponent<Rigidbody2D>().velocity = new Vector2(speed,GetComponent<Rigidbody2D>().velocity.y);
-			
+			this.transform.localScale = new Vector3(1,1,1);
 		}else if(Input.GetKey(KeyCode.A)){
 			
 			GetComponent<Rigidbody2D>().velocity = new Vector2(-speed,GetComponent<Rigidbody2D>().velocity.y);
+			this.transform.localScale = new Vector3(-1,1,1);;
 			
 		}else{
 			
